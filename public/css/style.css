@@ -286,4 +286,13 @@ video {
     transition: 0.4s ease-in;
 }
 
+.createMovieButton {
+    background: #242834;
+    left: 50%;
+    border: 1px solid #8d8f96;
+    color: white;
+    padding: 1rem 4rem;
+    cursor: pointer;
+}
+
 /* toast Main end*/
