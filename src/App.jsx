@@ -7,8 +7,25 @@ import {
 import MovieList from "./components/movieList/Index"
 import MovieDetails from "./components/movieDetails/Index"
 import CreateMovie from "./components/createMovie/Index"
+import { useEffect, useRef } from "react";
 
 const App = () => {
+
+    const inputRef = useRef(null)
+
+    useEffect(() => {
+        document.addEventListener('keydown', handleKeyPress);
+        return () => {
+            document.removeEventListener('keydown', handleKeyPress);
+        }
+    }, []);
+
+    const handleKeyPress = (e) => {
+        if (e.key === 'Enter' && e.shiftKey) {
+            inputRef.current.focus()
+        }
+    }
+
     return (
         <div className="appWrapper">
             {/* <div className="toastContainer activate">
@@ -20,7 +37,7 @@ const App = () => {
                 <header>
                     <img src="/images/movieLogo.png" />
                     <span>Movie Library</span>
-                    <input type="text" placeholder="Search Movies" />
+                    <input type="text" placeholder="Search Movies" ref={inputRef}  />
                 </header>
                 <Switch>
                     <Route exact path="/">

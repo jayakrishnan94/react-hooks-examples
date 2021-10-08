@@ -43,6 +43,7 @@ const Index = () => {
             <ul className="instructions">
                 <li>Use <code>tab</code> to cycle through movies </li>
                 <li>Use <code>ctrl+Enter</code> to go the selected movie detail page  </li>
+                <li>Use <code>shift+Enter</code> to select search input  </li>
             </ul>
             <section className="movieList">
                 {
