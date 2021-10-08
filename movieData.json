@@ -7,7 +7,78 @@
             "rating": 8.5,
             "genre": "Action",
             "poster": "https://c7.alamy.com/comp/T7C69P/avengers-endgame-2019-directed-by-anthony-and-joe-russo-starring-bradley-cooper-brie-larson-and-chris-hemsworth-epic-conclusion-and-22nd-film-in-the-marvel-cinematic-universe-T7C69P.jpg",
-            "movie": "https://www.youtube.com/watch?v=TcMBFSGVi1c"
+            "movie": "https://www.youtube.com/watch?v=TcMBFSGVi1c",
+            "plot": "After Thanos, an intergalactic warlord, disintegrates half of the universe, the Avengers must reunite and assemble again to reinvigorate their trounced allies and restore balance."
+        },
+        {
+            "id": 2,
+            "title": "Joker",
+            "language": "English",
+            "rating": 8.5,
+            "genre": "Drama",
+            "poster": "https://c4.wallpaperflare.com/wallpaper/675/275/718/joker-2019-movie-joker-joaquin-phoenix-actor-men-hd-wallpaper-preview.jpg",
+            "movie": "https://www.youtube.com/watch?v=zAGVQLHvwOY",
+            "plot": "Forever alone in a crowd, failed comedian Arthur Fleck seeks connection as he walks the streets of Gotham City. Arthur wears two masks -- the one he paints for his day job as a clown, and the guise he projects in a futile attempt to feel like he's part of the world around him. Isolated, bullied and disregarded by society, Fleck begins a slow descent into madness as he transforms into the criminal mastermind known as the Joker."
+        },
+        {
+            "id": 3,
+            "title": "Inception",
+            "language": "English",
+            "rating": 8.5,
+            "genre": "Action",
+            "poster": "https://c4.wallpaperflare.com/wallpaper/764/590/391/inception-leonardo-dicaprio-movie-posters-2400x3500-entertainment-movies-hd-art-wallpaper-preview.jpg",
+            "movie": "https://www.youtube.com/watch?v=YoHD9XEInc0",
+            "plot":"Cobb steals information from his targets by entering their dreams. Saito offers to wipe clean Cobb's criminal history as payment for performing an inception on his sick competitor's son."
+        },
+        {
+            "id": 4,
+            "title": "Godzilla",
+            "language": "English",
+            "rating": 8.5,
+            "genre": "Action",
+            "poster": "https://c4.wallpaperflare.com/wallpaper/846/216/1006/godzilla-movies-movie-poster-godzilla-king-of-the-monsters-wallpaper-preview.jpg",
+            "movie": "https://www.youtube.com/watch?v=QFxN2oDKk0E",
+            "plot":"Godzilla is a 2014 American monster film directed by Gareth Edwards. It is a reboot of Toho's Godzilla franchise and is the 30th film in the Godzilla franchise, the first film in Legendary's MonsterVerse, and the second Godzilla film to be completely produced by a Hollywood studio."
+        },
+        {
+            "id": 5,
+            "title": "Lord Of The Rings: Return Of The King",
+            "language": "English",
+            "rating": 8.5,
+            "genre": "Action",
+            "poster": "https://c4.wallpaperflare.com/wallpaper/1022/525/87/movies-the-lord-of-the-rings-aragorn-viggo-mortensen-movie-posters-posters-the-return-of-the-king-entertainment-movies-hd-art-wallpaper-preview.jpg",
+            "movie": "https://www.youtube.com/watch?v=r5X-hFf6Bwo",
+            "plot":"The former Fellowship members prepare for the final battle. While Frodo and Sam approach Mount Doom to destroy the One Ring, they follow Gollum, unaware of the path he is leading them to."
+        },
+        {
+            "id": 6,
+            "title": "Heidi",
+            "language": "English",
+            "rating": 8.5,
+            "genre": "Family",
+            "poster": "https://i.pinimg.com/originals/f2/c4/f1/f2c4f159b6c85e865b074162a16b903f.jpg",
+            "movie": "https://www.youtube.com/watch?v=eQrZ26kPSpM",
+            "plot":"Heidi forms an unusual bond with Alpohi, her grandfather, when she comes to live in the mountains. She gets a chance to go to Frankfurt to study, but she decides to return after feeling homesick."
+        },
+        {
+            "id": 7,
+            "title": "Jojo Rabbit",
+            "language": "English",
+            "rating": 8.5,
+            "genre": "Action",
+            "poster": "https://picfiles.alphacoders.com/299/299597.jpg",
+            "movie": "https://www.youtube.com/watch?v=tL4McUzXfFI",
+            "plot":"Hitler Youth cadet Jojo Betzler firmly believes in the ideals of Nazism manifested by his imaginary friend, Adolf Hitler. However, his foundations are shaken when he finds a Jewish girl in his house."
+        },
+        {
+            "id": 8,
+            "title": "Spider-Man: Into the Spider-Verse",
+            "language": "English",
+            "rating": 8.5,
+            "genre": "Action",
+            "poster": "https://c4.wallpaperflare.com/wallpaper/242/216/837/spider-man-miles-morales-movies-brooklyn-bridge-wallpaper-preview.jpg",
+            "movie": "https://www.youtube.com/watch?v=tg52up16eq0",
+            "plot":"After gaining superpowers from a spider bite, Miles Morales protects the city as Spider-Man. Soon, he meets alternate versions of himself and gets embroiled in an epic battle to save the multiverse."
         }
     ],
     "genres": [
