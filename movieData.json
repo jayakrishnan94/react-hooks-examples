@@ -1,0 +1,44 @@
+{
+    "movies": [
+        {
+            "id": 1,
+            "title": "Avengers: Endgame",
+            "language": "English",
+            "rating": 8.5,
+            "genre": "Action",
+            "poster": "https://c7.alamy.com/comp/T7C69P/avengers-endgame-2019-directed-by-anthony-and-joe-russo-starring-bradley-cooper-brie-larson-and-chris-hemsworth-epic-conclusion-and-22nd-film-in-the-marvel-cinematic-universe-T7C69P.jpg",
+            "movie": "https://www.youtube.com/watch?v=TcMBFSGVi1c"
+        }
+    ],
+    "genres": [
+        "Comedy",
+        "Drama",
+        "Romance",
+        "Horror",
+        "Sci-Fi",
+        "Action",
+        "Adventure",
+        "Fantasy"
+    ],
+    "userTypes": [
+        {
+            "id": 1,
+            "type": "movieCreator"
+        },
+        {
+            "id": 2,
+            "type": "movieViewer"
+        }
+    ],
+    "users": [
+        {
+            "id": 1,
+            "userTypeId": 1,
+            "firstName": "Hari",
+            "lasttName": "krishnan",
+            "password": "1234556",
+            "email": "hari@mailinator.com",
+            "phone": "1234567890"
+        }
+    ]
+}
