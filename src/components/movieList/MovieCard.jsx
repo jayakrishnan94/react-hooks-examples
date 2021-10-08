@@ -1,10 +1,10 @@
 import React from 'react'
 
 const MovieCard = (props) => {
-    const { title, language, genre, poster, plot } = props;
+    const { title, language, genre, poster, plot, id, handleMovieClick } = props;
     return (
-        <div class="movieCard">
-            <div class="innerWrapper">
+        <div className="movieCard" onClick={() => handleMovieClick(id)}>
+            <div className="innerWrapper">
                 <img src={poster} alt={title} />
                 <span>{title}</span>
                 <span>Language: {language}</span>

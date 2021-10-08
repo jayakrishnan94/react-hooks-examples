@@ -10,9 +10,9 @@ import CreateMovie from "./components/createMovie/Index"
 
 const App = () => {
     return (
-        <div class="appWrapper">
-            {/* <div class="toastContainer activate">
-                <span class="message">
+        <div className="appWrapper">
+            {/* <div className="toastContainer activate">
+                <span className="message">
                     This is a custom toast message!
                 </span>
             </div> */}

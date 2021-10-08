@@ -164,6 +164,26 @@ main {
     width: 100%;
 }
 
+.movieDetailWrapper .relatedMovies .relatedList {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+.movieDetailWrapper .relatedMovies .relatedList .poster {
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.movieDetailWrapper .relatedMovies .relatedList .poster img {
+    width: 150px;
+}
+
 .movieDetailWrapper .innerWrapper .movieDetails {
     padding: 2rem;
 }

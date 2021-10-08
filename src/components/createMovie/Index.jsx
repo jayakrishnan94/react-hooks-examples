@@ -16,38 +16,38 @@ const MultiMediaData = () => {
 const Index = () => {
     const [state, setstate] = useState("")
     return (
-        <section class="createMovieWrapper">
-            <div class="innerWrapper">
-                <div class="formWrapper">
+        <section className="createMovieWrapper">
+            <div className="innerWrapper">
+                <div className="formWrapper">
                     <form action="">
                         <h1>Create Movie</h1>
-                        <div class="field">
+                        <div className="field">
                             <input type="text" placeholder="Poster Link here" value={state} onChange={e => setstate(e.target.value)} />
                         </div>
-                        <div class="field">
+                        <div className="field">
                             <input type="text" placeholder="Movie Link here" />
                         </div>
-                        <div class="field">
+                        <div className="field">
                             <input type="text" placeholder="Title" />
                         </div>
-                        <div class="field">
+                        <div className="field">
                             <input type="text" placeholder="Language" />
                         </div>
-                        <div class="field">
+                        <div className="field">
                             <select name="Genre" id="">
                                 <option value="Select Genre">Select Genre</option>
                             </select>
                         </div>
-                        <div class="field">
+                        <div className="field">
                             <textarea name="" id="" cols="60" rows="6">
                             </textarea>
                         </div>
-                        <div class="field">
+                        <div className="field">
                             <button>Submit</button>
                         </div>
                     </form>
                 </div>
-                <div class="preview">
+                <div className="preview">
                     <MultiMediaData />
                 </div>
             </div>
