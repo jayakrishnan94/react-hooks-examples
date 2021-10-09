@@ -310,8 +310,21 @@ p {
     transition: 0.4s ease-in;
 }
 
+.buttonList {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 40%;
+}
+
+.buttonList .createMovieButton {
+    width: 50%;
+    background: #3f465a;
+    margin-left: 2rem;
+}
+
 .createMovieButton {
-    background: #242834;
+    background: #3f465a;
     left: 50%;
     border: 1px solid #8d8f96;
     color: white;

@@ -1,4 +1,5 @@
 import React, { useReducer, useState } from 'react'
+import { useMemo } from 'react/cjs/react.development'
 
 const MultiMediaData = (props) => {
     return (
@@ -43,8 +44,9 @@ const Index = () => {
     const initialState = {
         "title": "",
         "language": "",
-        "rating": 0,
+        "rating": "",
         "genre": "",
+        "price": "",
         "poster": "",
         "movie": "",
         "plot": ""
@@ -59,6 +61,11 @@ const Index = () => {
             [name]: value
         })
     }
+
+    const getTotalPrice = useMemo(() => {
+        // without useMemo, this function will be executed everytime we enter data in the form fields
+        return newMoviesList.reduce((acc, test) => Number(acc) + Number(test.price), 0)
+    }, [newMoviesList])
 
     return (
         <section className="createMovieWrapper">
@@ -80,6 +87,9 @@ const Index = () => {
                             <input type="text" placeholder="Title" name="title" value={movie.title} onChange={handleChane} />
                         </div>
                         <div className="field">
+                            <input type="text" placeholder="price" name="price" value={movie.price} onChange={handleChane} />
+                        </div>
+                        <div className="field">
                             <input type="text" placeholder="Language" name="language" value={movie.language} onChange={handleChane} />
                         </div>
                         <div className="field">
@@ -99,6 +109,7 @@ const Index = () => {
                         </div>
                     </form>
                 </div>
+                Total Price: {getTotalPrice}
                 <div className="previewList">
                     {
                         newMoviesList.map((item, idx) => {
