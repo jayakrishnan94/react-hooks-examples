@@ -1,12 +1,12 @@
 import React, { useReducer, useState } from 'react'
 
-const MultiMediaData = () => {
+const MultiMediaData = (props) => {
     return (
         <>
-            <img src="/images/no-image-icon.png" alt="" />
+            <img src={props.poster || "/images/no-image-icon.png"} alt="" />
             <video width="320" height="240" controls>
-                <source src="/images/Timelapse of a Cold Winter Day.mp4" type="video/mp4" />
-                <source src="/images/Timelapse of a Cold Winter Day.mp4" type="video/ogg" />
+                <source src={props.movie} type="video/ogg" />
+                <source src={props.movie} type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
         </>
@@ -19,14 +19,20 @@ const movieActions = {
 }
 
 const reducer = (state, action) => {
-    console.log(`state`, { state, action })
     switch (action.type) {
         case movieActions.addMovie:
             return [...state, action.payload]
         case movieActions.removeMovie:
-            console.log(`object 1`, state.splice(action.payload.id, 1))
-            console.log(`object 2`, state)
-            return [...state]
+            /* ! Wont work
+                const temp = state.splice(action.payload, 1)
+                return [...state]
+
+                https://github.com/facebook/react/issues/16295
+                https://stackoverflow.com/questions/54892403/usereducer-action-dispatched-twice
+                https://medium.com/@n.raj.suthar/building-a-todo-list-with-react-hooks-usereducer-95432a261c11
+            */
+
+            return state.filter((item, id) => id != action.payload)
         default:
             return state
     }
@@ -60,7 +66,10 @@ const Index = () => {
                 <div className="formWrapper">
                     <form action="">
                         <h1>Create Movie</h1>
-                        <MultiMediaData />
+                        <MultiMediaData
+                            poster={movie.poster}
+                            movie={movie.movie}
+                        />
                         <div className="field">
                             <input type="text" placeholder="Poster Link here" name="poster" value={movie.poster} onChange={handleChane} />
                         </div>
