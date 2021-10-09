@@ -2,14 +2,15 @@
 import {
     BrowserRouter as Router,
     Switch,
-    Route,
+    Route
 } from "react-router-dom";
 import MovieList from "./components/movieList/Index"
 import MovieDetails from "./components/movieDetails/Index"
 import CreateMovie from "./components/createMovie/Index"
+import Header from "./components/Header"
 import { useEffect, useRef } from "react";
 
-const App = () => {
+const App = (props) => {
 
     const inputRef = useRef(null)
 
@@ -34,19 +35,19 @@ const App = () => {
                 </span>
             </div> */}
             <Router>
-                <header>
-                    <img src="/images/movieLogo.png" />
-                    <span>Movie Library</span>
-                    <input type="text" placeholder="Search Movies" ref={inputRef}  />
-                </header>
                 <Switch>
                     <Route exact path="/">
-                        <MovieList />
+                        <>
+                            <Header inputRef={inputRef} />
+                            <MovieList />
+                        </>
                     </Route>
                     <Route exact path="/details/:id">
+                        <Header inputRef={inputRef} />
                         <MovieDetails />
                     </Route>
                     <Route exact path="/create/new">
+                        <Header inputRef={inputRef} />
                         <CreateMovie />
                     </Route>
                 </Switch>

@@ -214,50 +214,74 @@ p {
     justify-content: center;
 }
 .createMovieWrapper .innerWrapper {
-    padding: 5rem;
+    padding: 2rem;
     display: flex;
-    width: 90%;
+    flex-direction: row;
+    width: 100%;
     box-shadow: 2px 3px 12px rgb(0 0 0 / 40%);
 }
 
-.createMovieWrapper .innerWrapper .field {
+.createMovieWrapper .innerWrapper .previewList,
+.createMovieWrapper .innerWrapper .formWrapper {
+    width: 50%;
+    padding: 2rem;
+}
+.createMovieWrapper .innerWrapper .previewList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+.createMovieWrapper .innerWrapper .previewList .movie {
+    width: 30%;
+    padding: 1rem;
+    position: relative;
+    color: white;
+}
+.createMovieWrapper .innerWrapper .previewList .movie .removeMovie {
+    position: absolute;
+    top: 22px;
+    right: 38px;
+    background: black;
+    color: white;
+    width: 25px;
+    height: 24px;
+    border-radius: 10pc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: default;
+}
+
+.createMovieWrapper .innerWrapper .previewList .movie img {
+    width: 90%;
+}
+
+.createMovieWrapper .innerWrapper .formWrapper .field {
     padding: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.createMovieWrapper .innerWrapper .field h1 {
+.createMovieWrapper .innerWrapper .formWrapper .field h1 {
     align-self: center;
 }
 
-.createMovieWrapper .innerWrapper .field span {
+.createMovieWrapper .innerWrapper .formWrapper .field span {
     margin-top: 1rem;
 }
 
-.createMovieWrapper .innerWrapper .field input {
+.createMovieWrapper .innerWrapper .formWrapper .field input {
     border: none;
     padding: 1rem;
     border-radius: 0.5rem;
 }
 
-.createMovieWrapper .innerWrapper .field button {
+.createMovieWrapper .innerWrapper .formWrapper .field button {
     border: none;
     padding: 1rem;
     width: 50%;
-}
-.createMovieWrapper .innerWrapper .preview {
-    display: flex;
-    padding: 2rem 30rem;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-}
-.createMovieWrapper .innerWrapper .preview img,
-video {
-    width: 40rem;
-    padding: 1rem;
-    margin: 0;
 }
 /* movieDetail Main end*/
 

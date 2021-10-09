@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useReducer, useState } from 'react'
 
 const MultiMediaData = () => {
     return (
@@ -13,42 +13,100 @@ const MultiMediaData = () => {
     )
 }
 
+const movieActions = {
+    removeMovie: "removeMovie",
+    addMovie: "addMovie"
+}
+
+const reducer = (state, action) => {
+    console.log(`state`, { state, action })
+    switch (action.type) {
+        case movieActions.addMovie:
+            return [...state, action.payload]
+        case movieActions.removeMovie:
+            console.log(`object 1`, state.splice(action.payload.id, 1))
+            console.log(`object 2`, state)
+            return [...state]
+        default:
+            return state
+    }
+}
+
 const Index = () => {
-    const [state, setstate] = useState("")
+
+    const initialState = {
+        "title": "",
+        "language": "",
+        "rating": 0,
+        "genre": "",
+        "poster": "",
+        "movie": "",
+        "plot": ""
+    }
+    const [movie, setMovie] = useState(initialState)
+    const [newMoviesList, dispatch] = useReducer(reducer, [])
+
+    const handleChane = (ev) => {
+        const { name, value } = ev.target;
+        setMovie({
+            ...movie,
+            [name]: value
+        })
+    }
+
     return (
         <section className="createMovieWrapper">
             <div className="innerWrapper">
                 <div className="formWrapper">
                     <form action="">
                         <h1>Create Movie</h1>
+                        <MultiMediaData />
                         <div className="field">
-                            <input type="text" placeholder="Poster Link here" value={state} onChange={e => setstate(e.target.value)} />
+                            <input type="text" placeholder="Poster Link here" name="poster" value={movie.poster} onChange={handleChane} />
                         </div>
                         <div className="field">
-                            <input type="text" placeholder="Movie Link here" />
+                            <input type="text" placeholder="Movie Link here" name="movie" value={movie.movie} onChange={handleChane} />
                         </div>
                         <div className="field">
-                            <input type="text" placeholder="Title" />
+                            <input type="text" placeholder="Title" name="title" value={movie.title} onChange={handleChane} />
                         </div>
                         <div className="field">
-                            <input type="text" placeholder="Language" />
+                            <input type="text" placeholder="Language" name="language" value={movie.language} onChange={handleChane} />
                         </div>
                         <div className="field">
-                            <select name="Genre" id="">
+                            <select id="" name="genre" value={movie.genre} onChange={handleChane}>
                                 <option value="Select Genre">Select Genre</option>
                             </select>
                         </div>
                         <div className="field">
-                            <textarea name="" id="" cols="60" rows="6">
+                            <textarea id="" cols="60" rows="6" name="plot" value={movie.plot} onChange={handleChane}>
                             </textarea>
                         </div>
                         <div className="field">
-                            <button>Submit</button>
+                            <button
+                                type="button"
+                                onClick={() => dispatch({ type: movieActions.addMovie, payload: movie })}
+                            >Add Movie</button>
                         </div>
                     </form>
                 </div>
-                <div className="preview">
-                    <MultiMediaData />
+                <div className="previewList">
+                    {
+                        newMoviesList.map((item, idx) => {
+                            return (
+                                <div key={idx} className="movie">
+                                    <span
+                                        className="removeMovie"
+                                        onClick={() => dispatch({ type: movieActions.removeMovie, payload: idx })}
+                                    >
+                                        &#10006;
+                                    </span>
+                                    <img src={item.poster} alt={item.title} />
+                                    <span>{item.title}</span>
+                                </div>
+                            )
+                        })
+                    }
                 </div>
             </div>
         </section>
