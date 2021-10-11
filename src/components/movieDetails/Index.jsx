@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useParams, useHistory } from 'react-router-dom'
+import useDocumentTitle from '../useDocumentTitle'
 
 const Index = () => {
     const { id } = useParams()
@@ -14,6 +15,8 @@ const Index = () => {
         fetchMovie()
         fetchMoviesData()
     }, [id])
+
+    useDocumentTitle(title || "Movie Loading..")
 
     const fetchMovie = async () => {
         try {
